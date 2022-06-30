@@ -1,6 +1,6 @@
 ###
 Full Stack Restaurant App Project (Firebase, React Js)
 
-
-![image](C:\Users\orhan\restaurantapp\src\image\homepage)
-
+<div align="center">
+    <img src="C:\Users\orhan\restaurantapp\src\image\homepage" width="400px"</img> 
+</div>
