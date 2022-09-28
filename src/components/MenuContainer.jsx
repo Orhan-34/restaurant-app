@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import { IoFastFood } from 'react-icons/io5'
 import { categories } from '../utils/data'
 import { motion } from 'framer-motion'
@@ -9,7 +9,7 @@ const MenuContainer = () => {
 
     const [filter, setFilter] = useState("chicken")
 
-    const [{ foodItems }, dispatch] = useStateValue()
+    const [{ foodItems }] = useStateValue()
     return (
         <section className='w-full my-6' id="menu">
             <div className='w-full flex flex-col items-center justify-center'>
@@ -40,7 +40,7 @@ const MenuContainer = () => {
                     ))}
                 </div>
                 <div className='w-full '>
-                    <RowContainer flag={false} data={foodItems?.filter(n => n.categories == filter)} />
+                    <RowContainer flag={false} data={foodItems?.filter(n => n.categories === filter)} />
                 </div>
             </div>
         </section>

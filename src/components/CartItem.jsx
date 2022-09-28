@@ -22,9 +22,9 @@ const CartItem = ({ item, flag, setFlag }) => {
 
 
     const updateQty = (action, id) => {
-        if (action == 'add') {
+        if (action === 'add') {
             setQty(qty + 1)
-            cartItems.map((item) => {
+            cartItems.forEach((item) => {
                 if (item.id === id) {
                     item.qty += 1
                     setFlag(flag + 1)
@@ -32,13 +32,13 @@ const CartItem = ({ item, flag, setFlag }) => {
             })
             cartDispatch()
         } else {
-            if (qty == 1) {
+            if (qty === 1) {
                 items = cartItems.filter((item) => item.id !== id)
                 setFlag(flag + 1)
                 cartDispatch()
             } else {
                 setQty(qty - 1)
-                cartItems.map((item) => {
+                cartItems.forEach((item) => {
                     if (item.id === id) {
                         item.qty -= 1
                         setFlag(flag + 1)
